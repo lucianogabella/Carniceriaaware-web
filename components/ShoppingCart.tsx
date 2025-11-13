@@ -48,7 +48,7 @@ export const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onUpdateQuant
                 <div className="flex items-center flex-1 min-w-0">
                   <img src={item.imageUrl} alt={item.name} className="w-16 h-16 object-cover rounded-md" />
                   <div className="flex-1 mx-3 min-w-0">
-                    <p className="text-sm font-semibold truncate">{item.name}</p>
+                    <p className="text-sm font-semibold truncate text-stone-800">{item.name}</p>
                     <p className="text-sm text-stone-600">{formatPrice(item.price)}</p>
                   </div>
                 </div>
@@ -70,7 +70,7 @@ export const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onUpdateQuant
             ))}
           </div>
           <div className="mt-6 border-t pt-4">
-            <div className={`flex justify-between items-center font-semibold p-2 rounded-md ${isFlashing ? 'animate-flash' : ''}`}>
+            <div className={`flex justify-between items-center font-semibold text-stone-800 p-2 rounded-md ${isFlashing ? 'animate-flash' : ''}`}>
               <span>Subtotal</span>
               <span>{formatPrice(subtotal)}</span>
             </div>
