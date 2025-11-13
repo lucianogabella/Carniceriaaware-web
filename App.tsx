@@ -8,6 +8,7 @@ import { AboutUs } from './components/AboutUs';
 import { FaqAccordion } from './components/FaqAccordion';
 import { Product, CartItem } from './types';
 import { WhatsAppIcon } from './components/icons/WhatsAppIcon';
+import { Logistics } from './components/Logistics';
 
 function App() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -59,6 +60,7 @@ function App() {
             />
           </div>
         </div>
+        <Logistics />
         <AboutUs />
         <FaqAccordion />
       </main>
