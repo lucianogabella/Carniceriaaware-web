@@ -45,18 +45,24 @@ export const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onUpdateQuant
           <div className="space-y-4 max-h-64 overflow-y-auto pr-2">
             {items.map(item => (
               <div key={item.id} className="flex items-center justify-between">
-                <img src={item.imageUrl} alt={item.name} className="w-16 h-16 object-cover rounded-md" />
-                <div className="flex-1 mx-3">
-                  <p className="text-sm font-semibold">{item.name}</p>
-                  <p className="text-sm text-stone-600">{formatPrice(item.price)}</p>
+                <div className="flex items-center flex-1 min-w-0">
+                  <img src={item.imageUrl} alt={item.name} className="w-16 h-16 object-cover rounded-md" />
+                  <div className="flex-1 mx-3 min-w-0">
+                    <p className="text-sm font-semibold truncate">{item.name}</p>
+                    <p className="text-sm text-stone-600">{formatPrice(item.price)}</p>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-2">
+
+                <div className="flex items-center space-x-3">
                    <div className="flex items-center border border-stone-200 rounded">
                     <button onClick={() => onUpdateQuantity(item.id, item.quantity - 1)} className="p-1 hover:bg-stone-100 rounded-l"><MinusIcon className="w-4 h-4" /></button>
-                    <span className="px-2 text-sm w-8 text-center">
+                    <span className="px-2 text-sm w-8 text-center text-stone-800">
                         <span key={item.quantity} className="animate-pop-in">{item.quantity}</span>
                     </span>
                     <button onClick={() => onUpdateQuantity(item.id, item.quantity + 1)} className="p-1 hover:bg-stone-100 rounded-r"><PlusIcon className="w-4 h-4" /></button>
+                   </div>
+                   <div className="w-20 text-right font-semibold text-sm text-stone-800">
+                     {formatPrice(item.price * item.quantity)}
                    </div>
                   <button onClick={() => onRemoveItem(item.id)} className="text-stone-400 hover:text-red-500 p-1"><TrashIcon className="w-4 h-4"/></button>
                 </div>

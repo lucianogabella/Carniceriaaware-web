@@ -5,7 +5,7 @@ import { Product } from '../types';
 
 interface ProductListProps {
   products: Product[];
-  onAddToCart: (product: Product) => void;
+  onAddToCart: (product: Product, quantity: number) => void;
 }
 
 export const ProductList: React.FC<ProductListProps> = ({ products, onAddToCart }) => {

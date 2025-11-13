@@ -7,7 +7,7 @@ import { PRODUCTS, CATEGORIES, CATEGORY_INFO } from '../constants';
 import { Product, ProductCategory } from '../types';
 
 interface ProductDisplayProps {
-  onAddToCart: (product: Product) => void;
+  onAddToCart: (product: Product, quantity: number) => void;
 }
 
 export const ProductDisplay: React.FC<ProductDisplayProps> = ({ onAddToCart }) => {

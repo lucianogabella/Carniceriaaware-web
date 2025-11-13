@@ -23,7 +23,7 @@ export const PRODUCTS: Product[] = [
     description: 'Ideal para grandes reuniones o para stockear el freezer. Carne de novillito de primera calidad.',
     price: 350000,
     weight: 'aprox: 100 kg/s.',
-    imageUrl: STATIC_MEAT_IMAGE_URL,
+    imageUrl: 'https://storage.googleapis.com/aistudio-hosting/history/1721243178044/projects/f223126e-41a4-442a-9ac2-3d548b11110e/history/M0/1721243577322/label/prompt_0.png',
   },
   { id: 2, name: '5 Costillas', price: 15500, category: 'Vacuno x KG', description: 'Corte fresco de novillito de primera calidad, perfecto para tus preparaciones diarias.', weight: 'aprox: 1 kg/s.', imageUrl: STATIC_MEAT_IMAGE_URL },
   { id: 3, name: 'Arañita', price: 12600, category: 'Vacuno x KG', description: 'Corte fresco de novillito de primera calidad, perfecto para tus preparaciones diarias.', weight: 'aprox: 1 kg/s.', imageUrl: STATIC_MEAT_IMAGE_URL },
