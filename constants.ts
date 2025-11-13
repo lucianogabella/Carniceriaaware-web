@@ -1,6 +1,6 @@
 import { Product, ProductCategory } from './types';
 
-export const CATEGORIES = ['Todos', 'Media Res', 'Vacuno x KG'];
+export const CATEGORIES = ['Media Res', 'Vacuno x KG', 'Todos'];
 
 export const CATEGORY_INFO: Record<ProductCategory, { name: string; description: string }> = {
   'Media Res': {
@@ -23,7 +23,7 @@ export const PRODUCTS: Product[] = [
     description: 'Ideal para grandes reuniones o para stockear el freezer. Carne de novillito de primera calidad.',
     price: 350000,
     weight: 'aprox: 100 kg/s.',
-    imageUrl: 'https://images.unsplash.com/photo-1603048200693-51543d3923a9?q=80&w=400&h=300&fit=crop',
+    imageUrl: STATIC_MEAT_IMAGE_URL,
   },
   { id: 2, name: '5 Costillas', price: 15500, category: 'Vacuno x KG', description: 'Corte fresco de novillito de primera calidad, perfecto para tus preparaciones diarias.', weight: 'aprox: 1 kg/s.', imageUrl: STATIC_MEAT_IMAGE_URL },
   { id: 3, name: 'Arañita', price: 12600, category: 'Vacuno x KG', description: 'Corte fresco de novillito de primera calidad, perfecto para tus preparaciones diarias.', weight: 'aprox: 1 kg/s.', imageUrl: STATIC_MEAT_IMAGE_URL },

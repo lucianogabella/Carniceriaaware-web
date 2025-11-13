@@ -11,7 +11,7 @@ interface ProductDisplayProps {
 }
 
 export const ProductDisplay: React.FC<ProductDisplayProps> = ({ onAddToCart }) => {
-  const [activeCategory, setActiveCategory] = useState('Todos');
+  const [activeCategory, setActiveCategory] = useState('Media Res');
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredProducts = useMemo(() => {

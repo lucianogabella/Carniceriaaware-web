@@ -55,11 +55,11 @@ export const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onUpdateQuant
 
                 <div className="flex items-center space-x-3">
                    <div className="flex items-center border border-stone-200 rounded">
-                    <button onClick={() => onUpdateQuantity(item.id, item.quantity - 1)} className="p-1 hover:bg-stone-100 rounded-l"><MinusIcon className="w-4 h-4" /></button>
+                    <button onClick={() => onUpdateQuantity(item.id, item.quantity - 1)} className="p-1 hover:bg-stone-100 rounded-l"><MinusIcon className="w-4 h-4 text-stone-800" /></button>
                     <span className="px-2 text-sm w-8 text-center text-stone-800">
                         <span key={item.quantity} className="animate-pop-in">{item.quantity}</span>
                     </span>
-                    <button onClick={() => onUpdateQuantity(item.id, item.quantity + 1)} className="p-1 hover:bg-stone-100 rounded-r"><PlusIcon className="w-4 h-4" /></button>
+                    <button onClick={() => onUpdateQuantity(item.id, item.quantity + 1)} className="p-1 hover:bg-stone-100 rounded-r"><PlusIcon className="w-4 h-4 text-stone-800" /></button>
                    </div>
                    <div className="w-20 text-right font-semibold text-sm text-stone-800">
                      {formatPrice(item.price * item.quantity)}
