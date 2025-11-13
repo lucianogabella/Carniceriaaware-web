@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carniceria Aware</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+  <style>
+    @keyframes jiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
+    }
+    .animate-jiggle {
+      animation: jiggle 0.4s ease-in-out;
+    }
+    @keyframes pop-in {
+      0% { transform: scale(1.4); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .animate-pop-in {
+      display: inline-block;
+      animation: pop-in 0.3s ease-out;
+    }
+    @keyframes flash-bg {
+      0% { background-color: rgba(112, 40, 44, 0.1); }
+      100% { background-color: transparent; }
+    }
+    .animate-flash {
+      animation: flash-bg 0.7s ease-out;
+    }
+  </style>
+</head>
+  <body class="bg-[#F8F5F2]">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
